@@ -63,14 +63,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
-                                    <strong>Embed Map (src)):</strong>
-                                    <textarea class="form-control" style="height:150px" name="embed"
-                                        placeholder="embed map">{{ old('embed') }}</textarea>
-                                </div>
-                            </div>
-
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
                                     <strong>Alamat:</strong>
                                     <textarea class="form-control" style="height:150px" name="alamat"
                                         placeholder="Body">{{ old('alamat') }}</textarea>
@@ -88,6 +80,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <div class="form-group">
                                     <strong>Telepon:</strong>
                                     <input type="text" value="{{ old('telepon') }}" name="telepon" class="form-control" placeholder="telepon">
+                                </div>
+                            </div>
+
+                            
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                                    <strong>Buka:</strong>
+                                    <input type="time" value="{{ old('buka') }}" name="buka" class="form-control" placeholder="buka">
+                                </div>
+                            </div>
+
+                            
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                                    <strong>Tutup:</strong>
+                                    <input type="time" value="{{ old('tutup') }}" name="tutup" class="form-control" placeholder="tutup">
                                 </div>
                             </div>
 

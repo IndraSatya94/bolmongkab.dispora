@@ -57,12 +57,12 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="{{ route('tips.index') }}" class="nav-link {{ (request()->is('tips')) ? 'active' : '' }}">
                         <i class="fas fa-caret-right"></i>
                         <p>Tips</p>
                     </a>
-                </li>
+                </li> -->
 
                 <li class="nav-item">
                     <a href="{{ route('agenda.index') }}"
@@ -97,11 +97,27 @@
                 </li>
 
                 <li class="nav-item">
+                    <a href="{{ route('olahragas.index') }}"
+                        class="nav-link {{ (request()->is('olahragas')) ? 'active' : '' }}">
+                        <i class="fas fa-caret-right"></i>
+                        <p>Cabang Olahraga</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('download.index') }}"
+                        class="nav-link {{ (request()->is('download')) ? 'active' : '' }}">
+                        <i class="fas fa-caret-right"></i>
+                        <p>Download</p>
+                    </a>
+                </li>
+
+                <!-- <li class="nav-item">
                     <a href="{{ route('tags.index') }}" class="nav-link {{ (request()->is('tags')) ? 'active' : '' }}">
                         <i class="fas fa-caret-right"></i>
                         <p>Tags</p>
                     </a>
-                </li>
+                </li> -->
 
                 <li class="nav-item">
                     <a href="{{ route('logout') }}" class="nav-link">

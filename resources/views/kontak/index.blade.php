@@ -64,10 +64,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <thead class="table-primary">
                                     <tr>
                                         <th>No</th>
-                                        <th>Embed Map</th>
                                         <th>Alamat</th>
                                         <th>Email</th>
                                         <th>Telepon</th>
+                                        <th>Buka</th>
+                                        <th>Tutup</th>
                                         <th width="280px">Action</th>
                                     </tr>
                                 </thead>
@@ -76,10 +77,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <tbody>
                                     <tr>
                                         <td>{{ ++$i }}</td>
-                                        <td>{{ $kontak->embed }}</td>
                                         <td>{{ $kontak->alamat }}</td>
                                         <td>{{ $kontak->email }}</td>
                                         <td>{{ $kontak->telepon }}</td>
+                                        <td>{{ $kontak->buka }}</td>
+                                        <td>{{ $kontak->tutup }}</td>
                                         <td>
                                             <form action="{{ route('kontaks.destroy',$kontak->id) }}" method="POST"
                                                 onSubmit="return confirm('Hapus Data ?')">

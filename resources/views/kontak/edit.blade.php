@@ -65,14 +65,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
-                                    <strong>Embed Map:</strong>
-                                    <textarea class="form-control" style="height:150px" name="embed"
-                                        placeholder="embed map">{{ $kontak->embed }}</textarea>
-                                </div>
-                            </div>
-
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
                                     <strong>Alamat:</strong>
                                     <textarea class="form-control" style="height:150px" name="alamat"
                                         placeholder="Body">{{ $kontak->alamat }}</textarea>
@@ -93,6 +85,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </div>
                             </div>
 
+                            
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                                    <strong>Buka:</strong>
+                                    <input type="time" value="{{ $kontak->buka }}" name="buka" class="form-control" placeholder="buka">
+                                </div>
+                            </div>
+
+                            
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                                    <strong>Tutup:</strong>
+                                    <input type="time" value="{{ $kontak->tutup }}" name="tutup" class="form-control" placeholder="tutup">
+                                </div>
+                            </div>
                             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                                 <button type="submit" class="btn btn-primary"
                                     onClick="return confirm('Ubah Data ?')">Submit</button>

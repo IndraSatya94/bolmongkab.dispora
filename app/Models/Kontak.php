@@ -10,7 +10,7 @@ class Kontak extends Model
     use HasFactory;
   
     protected $fillable = [
-        'alamat','email','telepon','embed'
+        'alamat','email','telepon','buka','tutup'
     ];
 }
 

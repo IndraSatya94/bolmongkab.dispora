@@ -42,7 +42,8 @@ class KontakController extends Controller
             'alamat' => 'required',
             'email' => 'required',
             'telepon' => 'required',
-            'embed' => 'required'
+            'buka' => 'required',
+            'tutup' => 'required'
         ]);
   
         $input = $request->all();
@@ -88,7 +89,8 @@ class KontakController extends Controller
             'alamat' => 'required',
             'email' => 'required',
             'telepon' => 'required',
-            'embed' => 'required'
+            'buka' => 'required',
+            'tutup' => 'required'
         ]);
           
         $input = $request->all();

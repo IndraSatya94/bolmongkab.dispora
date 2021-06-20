@@ -16,7 +16,8 @@ use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\KontakController;
 use App\Http\Controllers\StatikController;
 use App\Http\Controllers\KategoriController;
-//akhir dishub
+use App\Http\Controllers\OlahragaController;
+//akhir dispora
 
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\PengumumanController;
@@ -34,13 +35,19 @@ route::get('/v-berita',[halamanController::class,'berita']);
 route::get('/v-tugasfungsi',[halamanController::class,'tugasfungsi']);
 route::get('/v-galeri',[halamanController::class,'galeri']);
 route::get('/v-kontak',[halamanController::class,'kontak']);
+route::get('/v-sambutan',[halamanController::class,'sambutan']);
+route::get('/v-kelembagaan',[halamanController::class,'kelembagaan']);
+route::get('/v-pemerintahan',[halamanController::class,'pemerintahan']);
+route::get('/v-usaha',[halamanController::class,'usaha']);
+route::get('/v-sekretariat',[halamanController::class,'sekretariat']);
+route::get('/v-bidangrehabilitas',[halamanController::class,'bidangrehabilitas']);
 route::get('/v-berita-detail/{beritas:id}',[halamanController::class,'beritadetail'])->name('berita-detail');
 route::get('/berita-cari',[halamancontroller::class,'hascarberita']);
 //akhir dishub
 
 route::get('/pengumumantemp',[halamancontroller::class,'pengumuman']);
 route::get('/pengumuman-cari',[halamancontroller::class,'hascarpengumuman']);
-route::get('/downloadtemp',[halamanController::class,'download']);
+route::get('/v-download',[halamanController::class,'download']);
 route::get('/agenda-detail/{agenda:id}',[halamanController::class,'agendadet'])->name('agenda-detail');
 route::get('/pengdet/{pengumuman:id}',[halamanController::class,'pengdet'])->name('pengdet');
 route::get('/getdownload/{download:id}',[halamanController::class,'getDownload'])->name('getdownload');
@@ -67,6 +74,7 @@ Route::group(['middleware' => ['auth','ceklevel:admin,operator']], function () {
     Route::resource('galeris', GaleriController::class);
     Route::resource('kontaks', KontakController::class);
     Route::resource('statiks', StatikController::class);
+    Route::resource('olahragas', OlahragaController::class);
 
     route::get('/admin',[LoginController::class,'index'])->name('admin');
     route::post('/deladmin/{users:id}',[LoginController::class,'destroy'])->name('deladmin');
